@@ -14,6 +14,7 @@ This project is an interactive rating modal developed using React.js and TypeScr
 - React.js: For building the component structure and user interface.
 - TypeScript: To enhance the code with static typing and improved tooling.
 - React DOM: For efficient rendering and manipulation of the DOM.
+- Material-UI: For pre-built components and styles to enhance the user interface.
 - Lucide React: For elegant and customizable icons in the modal.
 
 ## License
