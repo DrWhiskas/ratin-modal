@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ratingModal.css';
 import { Star } from 'lucide-react';
 import { Rating } from '@mui/material';
@@ -6,16 +6,9 @@ import Box from '@mui/material'
 
 
 interface RatingModalTextProps {
-	icon: string; // modal icon to leave
-	title: string; // The title of the modal
+	icon: React.ReactNode; // modal icon to leave
+	title?: string; // The title of the modal
 	text?: string; // The text or description
-}
-interface RatingModalRateProps {
-	maxRating: string; //
-	onRatinChange: (rating: number) => void;
-	currentRating: number;
-	hoverRating: number;
-	isEditable: boolean;
 }
 
 export default function RatingModal({ ...pros }: RatingModalTextProps) {
@@ -27,7 +20,9 @@ export default function RatingModal({ ...pros }: RatingModalTextProps) {
 			</div>
 			<p className="ratingModal__text">{pros.text}</p>
 			<div className="ratingModal__rating">
-				<Rating name="no-value" value={null} />
+				<Rating
+					className="ratingModal__rating__star"
+				/>
 			</div>
 		</section>
 	);

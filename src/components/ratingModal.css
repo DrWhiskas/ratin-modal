@@ -2,26 +2,46 @@
 	display: flex;
 	flex-direction: column;
 	background-color: white;
-	padding: 1rem;
+	padding: 1.5rem;
 	width: 20vw;
+	min-width: 250px;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	align-items: center;
-    border-radius: 5px;
+	border-radius: 5px;
 }
-.ratingModal__header{
-    display: flex;
-    flex-direction: column;
+/* HEADER */
+.ratingModal__header {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 5%;
 }
-.ratingModal__header__btn{
-    background-color: transparent;
-    border: none;
+.ratingModal__header__btn {
+	background-color: transparent;
+	border: none;
+	align-self: end;
+    margin-bottom: 5%;
+    transition: all ease-in-out;
+    font-size: large;
+}
+.ratingModal__header__btn:hover{
+    cursor: pointer;
+    color: red;
+}
+.ratingModal__header__title {
+	font-size: clamp(1rem, 1.5vw, 2rem);
+	letter-spacing: 0.1rem;
+	text-align: center;
+}
+
+/* RATING */
+.ratingModal__text {
+	margin-bottom: 5%;
+	font-size: clamp(0.9rem, 0.75vw, 1rem);
+	text-align: center;
 }
 .ratingModal__rating__star {
-	transition: all ease-in-out 0.1s;
-	color: #907fe8;
+	font-size: xx-large;
 }
-.ratingModal__rating__star:hover {
-	fill: #ffd072;
-	cursor: pointer;
-	stroke: none;
+.ratingModal__rating__star .MuiRating-icon {
+	font-size: xx-large;
 }
